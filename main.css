@@ -1,0 +1,341 @@
+/* 全局重置和基础样式 */
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  
+  background-color: #111111;
+}
+.bt {
+  position: relative;
+  justify-self: end;
+  right: -99em; 
+}
+.cj2 {
+  position: relative;
+  justify-self: end;
+  right: -99em; 
+}
+.bt.hhh {
+  transition: 1s;
+  right: 0;
+}
+.cj2.hhh {
+  transition: 1s;
+  right: 0;
+}
+/* 音频控件样式 */
+audio {
+  position: fixed;
+  padding: 10px;
+  right: 0;
+  z-index: 200;
+  outline: none;
+}
+
+/* 场景容器 */
+#scene {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* 图片通用样式 */
+.img {
+  width: 110vw;
+  height: 110vh;
+  background-size: cover;
+  background-position: top center;
+}
+
+/* 各图层背景 */
+.font {
+  background-image: url("img/font.png");
+}
+.bg {
+  background-image: url("img/bg.png");
+}
+.mountain1 {
+  background-image: url("img/mountain1.png");
+}
+.mountain2 {
+  background-image: url("img/mountain2.png");
+}
+.cloud {
+  background-image: url("img/cloud.png");
+}
+.leaf {
+  margin-top: 60px;
+  background-image: url("img/leaf.png");
+  filter: blur(4px);
+}
+
+/* 女孩图片定位 */
+.girl1 {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("img/girl1.png");
+  margin-top: 15vh;
+}
+
+.girl2 {
+  width: 90vw;
+  height: 90vh;
+  background-image: url("img/girl2.png");
+  margin-left: 9vh;
+  margin-top: 22vh;
+}
+
+.grassland {
+  width: 130vw;
+  height: 130vh;
+  background-image: url("img/grassland.png");
+  margin-top: -16vh;
+}
+
+/* 首页布局 */
+.index {
+  min-width: 100%;
+  min-height: 100vh;
+  display: grid;
+  position: fixed;
+  z-index: 999;
+  word-wrap: break-word;
+}
+
+/* 模糊效果层 */
+.blux {
+  transition: 2s;
+  filter: blur(0px);
+  z-index: 400;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.blux.load {
+  transition: 2s;
+  filter: blur(30px);
+}
+
+/* 标题样式 */
+.H1 {
+  margin-bottom: 0;
+  text-shadow: rgb(0, 0, 0) 0 5px 0;
+  margin-top: 35vh;
+  font-size: 3em; /* 响应式字体 */
+  text-align: center;
+  color: rgb(255, 255, 255);
+  justify-self: center;
+
+}
+.cj {
+
+  position: absolute;
+  display: grid;
+  right: 0;
+
+}
+.cj img {
+  width: 130%;
+}
+/* 博客链接区域 */
+.more {
+  height: 50%;
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.blog {
+  transition: 0.4s;
+  text-align: center;
+  margin: 0;
+  margin: 2em;
+}
+
+/* 博客文字效果 */
+.BLOG1 {
+  text-align: justify;
+
+  font-weight: 600;
+  transition: 0.3s;
+  font-size: 3em;
+  color: transparent;
+}
+
+.BLOG2 {
+  align-self: center;
+  font-weight: 800;
+  transition: 0.3s;
+  color: transparent;
+  font-size: 0;
+  display: block;
+}
+
+/* 悬停效果 */
+.blog:hover .BLOG1 {
+  transition: 0.1s;
+  font-size: clamp(2em, 10vw, 400%);
+  color: transparent;
+  text-shadow: 0px 2px 8px #f5d549;
+}
+
+.blog:hover .BLOG2 {
+  margin-top: -30px;
+  transition: 0.2s;
+  width: auto;
+  height: auto;
+  text-align: center;
+  align-self: center;
+  color: #feffa8;
+  text-shadow: #111111 0px 5px;
+  transform: rotateX(15deg);
+  font-size: 4em;
+}
+
+/* 阴影效果 */
+.shadow {
+  transition: 1s;
+  filter: drop-shadow(0 0 15px rgb(36, 36, 36));
+  color: #f5d549;
+}
+
+.shin {
+  transition: 0.5s;
+  filter: drop-shadow(0 0px 25px rgb(88, 88, 88));
+  text-shadow: #111111 0 0 15px;
+  margin-top: 18vh;
+  color: #979eff;
+}
+
+/* 页脚样式 */
+footer {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+}
+
+footer div {
+  bottom: 0;
+  align-self: end;
+}
+footer a {
+  color: transparent;
+}
+.info a {
+  color: transparent;
+}
+.info.t1 a:hover {
+  color: #ff5c5c;
+  transition: 0.5s;
+}
+.ba.t2 a {
+  color: #cecece;
+  transition: 0.5s;
+}
+.loli {
+  opacity: 0;
+}
+.loli.t3 {
+  opacity: 1;
+  transition: 0.3s;
+}
+footer img {
+  max-width: 50%;
+  align-self: end;
+}
+.footer {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.info.t1 a {
+  color: #a8a8a8;
+  transition: 0.3s;
+}
+.dis {
+  display: none !important;
+}
+
+/* 连接区域 */
+.connect {
+  height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.connect a {
+  width: 0;
+  height: 0;
+  margin-right: 3em;
+  margin-left: 3em;
+}
+
+.connect.qwq a {
+  transition: 0.6s;
+  width: 48px;
+  height: 48px;
+}
+
+.connect svg {
+  margin: 0;
+  stroke: transparent;
+}
+
+.connect.qwq svg {
+  transition: 1s;
+  stroke: #dfdfdf;
+  filter: drop-shadow(0 0 15px rgb(170, 170, 170));
+}
+
+.connect svg:hover {
+  transition: 0.4s;
+  stroke: rgb(233, 100, 100);
+  filter: drop-shadow(0 0 15px rgb(233, 100, 100));
+}
+.more1 {
+  height: 50%;
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  color: transparent;
+}
+.more1 a {
+  font-size: 1.5em;
+  font-weight: 500;
+  color: transparent;
+  margin: 2em;
+}
+.more1.infoshadow a:hover {
+  transition: 0.5s;
+
+  filter: drop-shadow(0 0px 13px rgb(138, 138, 138));
+}
+
+.infoshadow {
+  transition: 0.5s;
+  filter: drop-shadow(0 0 3px #535353);
+  
+}
+.more1.infoshadow a {
+  transition: 0.4s;
+  
+  color: rgb(255, 149, 63);
+  text-shadow: #111111 0 1px;
+}
