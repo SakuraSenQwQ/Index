@@ -75,6 +75,7 @@ comment2.addEventListener("click", fcomment2)
 document.getElementById("like").addEventListener("click", like)
 document.getElementById("like2").addEventListener("click", like2)
 document.getElementById("share").addEventListener("click", share)
+document.getElementById("share2").addEventListener("click", share2)
 
 //链接跳转
 document.querySelector(".cbox.qq").addEventListener("click", function () {
@@ -136,6 +137,11 @@ function share() {
     var url = window.location.href
     navigator.clipboard.writeText(url + "\n" + "BYD网站一共两篇文章还要复制文章的链接");
     document.getElementById("share").innerHTML = "<img src='icon/share.svg'>999+ &nbsp 已复制！";
+}
+function share2() {
+    var url = window.location.href
+    navigator.clipboard.writeText(url + "\n" + "BYD网站一共两篇文章还要复制文章的链接");
+    document.getElementById("share2").innerHTML = "<img src='icon/share.svg'>999+ &nbsp 已复制！";
 }
 function fcomment1() {
     try {
